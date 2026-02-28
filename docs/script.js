@@ -38,6 +38,12 @@ const setActive = () => {
 window.addEventListener('scroll', setActive, { passive: true });
 window.addEventListener('load', setActive);
 
+[...document.querySelectorAll('.lang-switch .lang')].forEach((a) => {
+  const href = (a.getAttribute('href') || '').toLowerCase();
+  const lang = href.includes('en.html') ? 'en' : href.includes('ru.html') ? 'ru' : 'de';
+  a.addEventListener('click', () => localStorage.setItem('capytarot_lang_pref', lang));
+});
+
 const tarotDescriptions = {
   de: {
     '0 fool': 'Neuanfang mit Mut und offenem Herzen.\nDer Weg zeigt sich, sobald du losgehst.',
@@ -130,6 +136,94 @@ const pageLang = (document.documentElement.lang || 'de').toLowerCase().startsWit
   : (document.documentElement.lang || 'de').toLowerCase().startsWith('en')
     ? 'en'
     : 'de';
+
+const langHref = { de: 'index.html', en: 'en.html', ru: 'ru.html' };
+const popup = document.getElementById('lang-popup');
+const askStep = document.getElementById('lang-step-ask');
+const confirmStep = document.getElementById('lang-step-confirm');
+const langButtons = [...document.querySelectorAll('.lang-choice[data-lang]')];
+const confirmBtn = document.getElementById('lang-confirm-btn');
+const confirmKicker = document.getElementById('lang-confirm-kicker');
+const confirmTitle = document.getElementById('lang-confirm-title');
+const confirmText = document.getElementById('lang-confirm-text');
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('resetlang') === '1') {
+  localStorage.removeItem('capytarot_lang_pref');
+  urlParams.delete('resetlang');
+  const clean = `${window.location.pathname}${urlParams.toString() ? `?${urlParams.toString()}` : ''}${window.location.hash || ''}`;
+  window.history.replaceState({}, '', clean);
+}
+
+const savedLang = localStorage.getItem('capytarot_lang_pref');
+let pendingLang = pageLang;
+
+const popupCopy = {
+  de: {
+    confirmKicker: 'Aurelio grinst 🐾',
+    confirmTitle: 'Wusste ich doch, dass du genau diese nimmst.',
+    confirmText: 'Los geht\'s. ✨',
+    confirmBtn: 'Weiter'
+  },
+  en: {
+    confirmKicker: 'Aurelio smirks 🐾',
+    confirmTitle: 'I knew you’d pick this one anyway.',
+    confirmText: 'Let’s begin. ✨',
+    confirmBtn: 'Continue'
+  },
+  ru: {
+    confirmKicker: 'Аурелио улыбается 🐾',
+    confirmTitle: 'Я и так знал, что ты выберешь именно это.',
+    confirmText: 'Поехали. ✨',
+    confirmBtn: 'Продолжить'
+  }
+};
+
+const applyPopupCopy = (lang) => {
+  const c = popupCopy[lang] || popupCopy.en;
+  if (confirmKicker) confirmKicker.textContent = c.confirmKicker;
+  if (confirmTitle) confirmTitle.textContent = c.confirmTitle;
+  if (confirmText) confirmText.textContent = c.confirmText;
+  if (confirmBtn) confirmBtn.textContent = c.confirmBtn;
+};
+
+const finalizeLang = (lang) => {
+  if (!langHref[lang]) return;
+  localStorage.setItem('capytarot_lang_pref', lang);
+  if (lang !== pageLang) {
+    window.location.href = langHref[lang];
+  } else if (popup) {
+    popup.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+};
+
+if (popup) {
+  if (savedLang && langHref[savedLang]) {
+    if (savedLang !== pageLang) {
+      window.location.href = langHref[savedLang];
+    }
+  } else {
+    pendingLang = pageLang;
+    applyPopupCopy(pendingLang);
+    if (askStep) askStep.hidden = false;
+    if (confirmStep) confirmStep.hidden = true;
+    popup.classList.add('show');
+    document.body.style.overflow = 'hidden';
+
+    langButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        pendingLang = btn.dataset.lang;
+        applyPopupCopy(pendingLang);
+        if (askStep) askStep.hidden = true;
+        if (confirmStep) confirmStep.hidden = false;
+      });
+    });
+
+    if (confirmBtn) {
+      confirmBtn.addEventListener('click', () => finalizeLang(pendingLang));
+    }
+  }
+}
 
 const tarotCards = document.querySelectorAll('.tarot-card');
 

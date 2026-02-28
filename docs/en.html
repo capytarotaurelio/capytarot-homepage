@@ -10,6 +10,32 @@
 <body>
   <div class="bg-overlay"></div>
 
+  <div id="lang-popup" class="lang-popup" role="dialog" aria-modal="true" aria-labelledby="lang-popup-title">
+    <div class="lang-popup-card">
+      <img src="assets/Bilder/Aurelio.jpg" alt="Aurelio" class="lang-popup-avatar" />
+
+      <div class="lang-step lang-step-ask" id="lang-step-ask">
+        <p class="lang-popup-kicker">Aurelio fragt / asks / спрашивает 🐾</p>
+        <h2>Sprache wählen · Choose your language · Выберите язык</h2>
+        <p class="lang-popup-text">Deutsch, English oder Русский — ich öffne direkt die passende Version. ✨</p>
+        <div class="lang-popup-actions">
+          <button type="button" class="lang-choice" data-lang="de">🇩🇪 Deutsch</button>
+          <button type="button" class="lang-choice" data-lang="en">🇬🇧 English</button>
+          <button type="button" class="lang-choice" data-lang="ru">🇷🇺 Русский</button>
+        </div>
+      </div>
+
+      <div class="lang-step lang-step-confirm" id="lang-step-confirm" hidden>
+        <p class="lang-popup-kicker" id="lang-confirm-kicker">Aurelio smirks 🐾</p>
+        <h2 id="lang-confirm-title">I knew you’d pick this one anyway.</h2>
+        <p class="lang-popup-text" id="lang-confirm-text">Let’s begin. ✨</p>
+        <div class="lang-popup-actions">
+          <button type="button" class="lang-choice lang-choice-primary" id="lang-confirm-btn">Let’s go</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <header class="site-header" id="top">
     <div class="brand">
       <img src="assets/Bilder/Aurelio.jpg" alt="Aurelio" />
@@ -217,8 +243,8 @@
   </main>
 
   <footer class="site-footer">
-    <p>© Capytarot · Draft v2 · built from source material in the project folder</p>
-    <a href="#top">Back to top ↑</a>
+    <p>© 2026 Aurelio Capytarot · Website v3small</p>
+    <p><a href="impressum.html">Imprint</a> · <a href="#top">Back to top ↑</a></p>
   </footer>
 
   <script src="script.js" defer></script>

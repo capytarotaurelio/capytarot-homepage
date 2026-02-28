@@ -5,14 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aurelio · Capytarot</title>
   <meta name="description" content="Aurelio — мистический капибара-оракул: профиль, предложения, история, таро, кристаллы и руны." />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20260228c" />
 </head>
 <body>
   <div class="bg-overlay"></div>
 
+  <div id="lang-popup" class="lang-popup" role="dialog" aria-modal="true" aria-labelledby="lang-popup-title">
+    <div class="lang-popup-card">
+      <img src="assets/Bilder/Aurelio.jpg" alt="Aurelio" class="lang-popup-avatar" />
+
+      <div class="lang-step lang-step-ask" id="lang-step-ask">
+        <p class="lang-popup-kicker">Aurelio fragt / asks / спрашивает 🐾</p>
+        <h2 id="lang-popup-title">Sprache wählen · Choose your language · Выберите язык</h2>
+        <p class="lang-popup-text">Deutsch, English oder Русский — ich öffne direkt die passende Version. ✨</p>
+        <div class="lang-popup-actions">
+          <button type="button" class="lang-choice" data-lang="de">🇩🇪 Deutsch</button>
+          <button type="button" class="lang-choice" data-lang="en">🇬🇧 English</button>
+          <button type="button" class="lang-choice" data-lang="ru">🇷🇺 Русский</button>
+        </div>
+      </div>
+
+      <div class="lang-step lang-step-confirm" id="lang-step-confirm" hidden>
+        <p class="lang-popup-kicker" id="lang-confirm-kicker">Aurelio smirks 🐾</p>
+        <h2 id="lang-confirm-title">I knew you’d pick this one anyway.</h2>
+        <p class="lang-popup-text" id="lang-confirm-text">Let’s begin. ✨</p>
+        <div class="lang-popup-actions">
+          <button type="button" class="lang-choice lang-choice-primary" id="lang-confirm-btn">Let’s go</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <header class="site-header" id="top">
     <div class="brand">
-      <img src="assets/Bilder/Aurelio.png" alt="Aurelio" />
+      <img src="assets/Bilder/Aurelio.jpg" alt="Aurelio" />
       <div>
         <p class="kicker">CAPYTAROT</p>
         <h1>Аурелио, капи-оракул</h1>
@@ -49,7 +75,7 @@
           <a class="btn btn-ghost" href="#tarot">Глянуть колоду</a>
         </div>
       </div>
-      <img class="hero-image hero-aurelio" src="assets/Bilder/Aurelio.png" alt="Аурелио, Провидец" />
+      <img class="hero-image hero-aurelio" src="assets/Bilder/Aurelio.jpg" alt="Аурелио, Провидец" />
     </section>
 
     <section class="ticker" aria-label="Хайлайты">
@@ -65,7 +91,7 @@
     <section id="profil" class="card section reveal">
       <h3>Профиль</h3>
       <div class="grid-2">
-        <img src="assets/Bilder/glaskugel-alpha.png" alt="Хрустальный шар" class="section-image" />
+        <img src="assets/Bilder/glaskugel-alpha.jpg" alt="Хрустальный шар" class="section-image" />
         <div>
           <p>
             <strong>Аурелио</strong> соединяет ярмарочный инстинкт и современную мистическую практику: спокойный в подаче,
@@ -111,7 +137,7 @@
     <section id="geschichte" class="card section reveal">
       <h3>История</h3>
       <div class="grid-2">
-        <img src="assets/Bilder/aurelio-profile-new.png" alt="Профиль Аурелио" class="section-image zelt-small" />
+        <img src="assets/Bilder/aurelio-profile-new.jpg" alt="Профиль Аурелио" class="section-image zelt-small" />
         <div>
           <p>
             История начинается как легенда, а заканчивается точным попаданием: в деревне между туманом и ярмарочным светом
@@ -131,32 +157,32 @@
       <h3>Таро</h3>
       <p class="section-intro">Вся колода в одном месте: Старшие Арканы + четыре туза. Нажимай, смотри, выбирай свой знак.</p>
       <div id="tarot-grid" class="tarot-grid" aria-live="polite">
-        <article class="tarot-card"><img src="assets/Tarotkarten/0 fool.png" alt="Карта Таро: Шут" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/1 magician.png" alt="Карта Таро: Маг" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/2 high priestress.png" alt="Карта Таро: Верховная Жрица" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/3 empress.png" alt="Карта Таро: Императрица" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/4 emperor.png" alt="Карта Таро: Император" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/5 hierophant.png" alt="Карта Таро: Иерофант" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/6 lovers.png" alt="Карта Таро: Влюблённые" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/7 chariot.png" alt="Карта Таро: Колесница" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/8 strengh.png" alt="Карта Таро: Сила" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/9 hermit.png" alt="Карта Таро: Отшельник" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/10 wheel.png" alt="Карта Таро: Колесо Фортуны" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/11 justice.png" alt="Карта Таро: Справедливость" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/12 hanged man.png" alt="Карта Таро: Повешенный" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/13 death.png" alt="Карта Таро: Смерть" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/14 temperance.png" alt="Карта Таро: Умеренность" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/15 devil.png" alt="Карта Таро: Дьявол" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/16 tower.png" alt="Карта Таро: Башня" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/17 star.png" alt="Карта Таро: Звезда" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/18 moon.png" alt="Карта Таро: Луна" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/19 sun.png" alt="Карта Таро: Солнце" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/20 judgement.png" alt="Карта Таро: Суд" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/21 world.png" alt="Карта Таро: Мир" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/Ace of cups.png" alt="Карта Таро: Туз Кубков" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/Ace of pentacles.png" alt="Карта Таро: Туз Пентаклей" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/Ace of swords.png" alt="Карта Таро: Туз Мечей" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/Ace of wands.png" alt="Карта Таро: Туз Жезлов" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/0 fool.jpg" alt="Карта Таро: Шут" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/1 magician.jpg" alt="Карта Таро: Маг" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/2 high priestress.jpg" alt="Карта Таро: Верховная Жрица" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/3 empress.jpg" alt="Карта Таро: Императрица" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/4 emperor.jpg" alt="Карта Таро: Император" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/5 hierophant.jpg" alt="Карта Таро: Иерофант" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/6 lovers.jpg" alt="Карта Таро: Влюблённые" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/7 chariot.jpg" alt="Карта Таро: Колесница" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/8 strengh.jpg" alt="Карта Таро: Сила" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/9 hermit.jpg" alt="Карта Таро: Отшельник" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/10 wheel.jpg" alt="Карта Таро: Колесо Фортуны" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/11 justice.jpg" alt="Карта Таро: Справедливость" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/12 hanged man.jpg" alt="Карта Таро: Повешенный" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/13 death.jpg" alt="Карта Таро: Смерть" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/14 temperance.jpg" alt="Карта Таро: Умеренность" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/15 devil.jpg" alt="Карта Таро: Дьявол" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/16 tower.jpg" alt="Карта Таро: Башня" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/17 star.jpg" alt="Карта Таро: Звезда" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/18 moon.jpg" alt="Карта Таро: Луна" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/19 sun.jpg" alt="Карта Таро: Солнце" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/20 judgement.jpg" alt="Карта Таро: Суд" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/21 world.jpg" alt="Карта Таро: Мир" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/Ace of cups.jpg" alt="Карта Таро: Туз Кубков" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/Ace of pentacles.jpg" alt="Карта Таро: Туз Пентаклей" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/Ace of swords.jpg" alt="Карта Таро: Туз Мечей" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/Ace of wands.jpg" alt="Карта Таро: Туз Жезлов" loading="lazy"></article>
       </div>
       <p class="shop-cta tarot-cta"><a class="btn btn-crystal" href="#" aria-label="Webshop coming soon">Webshop coming soon</a></p>
     </section>
@@ -164,7 +190,7 @@
     <section id="kristalle" class="card section reveal">
       <h3>Кристаллы</h3>
       <div class="triple-layout">
-        <img src="assets/Bilder/capycrystal-alpha.png" alt="Capycrystal" class="section-image capy-tall" />
+        <img src="assets/Bilder/capycrystal-alpha.jpg" alt="Capycrystal" class="section-image capy-tall" />
         <div>
           <p>
             Кристаллы здесь — не «волшебная таблетка», а твой энергетический апгрейд.
@@ -183,14 +209,14 @@
           </ul>
           <p><a class="btn btn-crystal" href="#" aria-label="Webshop coming soon">Webshop coming soon</a></p>
         </div>
-        <img src="assets/Bilder/kristalle-alpha.png" alt="Кристаллы" class="side-raw" />
+        <img src="assets/Bilder/kristalle-alpha.jpg" alt="Кристаллы" class="side-raw" />
       </div>
     </section>
 
     <section id="runes" class="card section reveal">
       <h3>Руны</h3>
       <div class="triple-layout">
-        <img src="assets/Bilder/capyrune-alpha.png" alt="Capyrune" class="section-image capy-tall" />
+        <img src="assets/Bilder/capyrune-alpha.jpg" alt="Capyrune" class="section-image capy-tall" />
         <div>
           <p>
             Руны — это режим «без фильтров». Древняя система, которая не ходит вокруг да около.
@@ -205,22 +231,22 @@
           </ul>
           <p><a class="btn btn-crystal" href="#" aria-label="Webshop coming soon">Webshop coming soon</a></p>
         </div>
-        <img src="assets/Bilder/runes-alpha.png" alt="Набор рун" class="side-raw" />
+        <img src="assets/Bilder/runes-alpha.jpg" alt="Набор рун" class="side-raw" />
       </div>
     </section>
 
     <section id="closing-banner" class="card section reveal closing-banner">
       <h3>Увидимся в вебшопе ✨</h3>
       <p class="section-intro">Webshop coming soon · детали по запросу.</p>
-      <img src="assets/Bilder/aurelio-banner-closing.png" alt="Финальный баннер Аурелио" class="closing-banner-image" />
+      <img src="assets/Bilder/aurelio-banner-closing.jpg" alt="Финальный баннер Аурелио" class="closing-banner-image" />
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© Capytarot · Черновик v2 · создано из материалов проектной папки</p>
-    <a href="#top">Наверх ↑</a>
+    <p>© 2026 Aurelio Capytarot · Website v3small</p>
+    <p><a href="impressum.html">Imprint</a> · <a href="#top">Наверх ↑</a></p>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script src="script.js?v=20260228c" defer></script>
 </body>
 </html>

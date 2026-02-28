@@ -152,7 +152,7 @@ tarotCards.forEach((card) => {
 
   const src = decodeURIComponent(img.getAttribute('src') || '').toLowerCase();
   const file = src.split('/').pop() || '';
-  const key = file.replace('.png', '');
+  const key = file.replace(/\.(png|jpg|jpeg|webp)$/i, '');
   const desc = tarotDescriptions[pageLang]?.[key];
   if (!desc) return;
 

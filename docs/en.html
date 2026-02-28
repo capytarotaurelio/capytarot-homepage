@@ -5,40 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aurelio · Capytarot</title>
   <meta name="description" content="Aurelio, the mystical capybara oracle: Profile, Offerings, Story, Tarot, Crystals, and Runes." />
-  <link rel="stylesheet" href="styles.css?v=20260228c" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="bg-overlay"></div>
 
-  <div id="lang-popup" class="lang-popup" role="dialog" aria-modal="true" aria-labelledby="lang-popup-title">
-    <div class="lang-popup-card">
-      <img src="assets/Bilder/Aurelio.jpg" alt="Aurelio" class="lang-popup-avatar" />
-
-      <div class="lang-step lang-step-ask" id="lang-step-ask">
-        <p class="lang-popup-kicker">Aurelio fragt / asks / спрашивает 🐾</p>
-        <h2>Sprache wählen · Choose your language · Выберите язык</h2>
-        <p class="lang-popup-text">Deutsch, English oder Русский — ich öffne direkt die passende Version. ✨</p>
-        <div class="lang-popup-actions">
-          <button type="button" class="lang-choice" data-lang="de">🇩🇪 Deutsch</button>
-          <button type="button" class="lang-choice" data-lang="en">🇬🇧 English</button>
-          <button type="button" class="lang-choice" data-lang="ru">🇷🇺 Русский</button>
-        </div>
-      </div>
-
-      <div class="lang-step lang-step-confirm" id="lang-step-confirm" hidden>
-        <p class="lang-popup-kicker" id="lang-confirm-kicker">Aurelio smirks 🐾</p>
-        <h2 id="lang-confirm-title">I knew you’d pick this one anyway.</h2>
-        <p class="lang-popup-text" id="lang-confirm-text">Let’s begin. ✨</p>
-        <div class="lang-popup-actions">
-          <button type="button" class="lang-choice lang-choice-primary" id="lang-confirm-btn">Let’s go</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <header class="site-header" id="top">
     <div class="brand">
-      <img src="assets/Bilder/Aurelio.jpg" alt="Aurelio" />
+      <img src="assets/Bilder/Aurelio.png" alt="Aurelio" />
       <div>
         <p class="kicker">CAPYTAROT</p>
         <h1>Aurelio, the Seer</h1>
@@ -75,7 +49,7 @@
           <a class="btn btn-ghost" href="#tarot">Browse Tarot Deck</a>
         </div>
       </div>
-      <img class="hero-image hero-aurelio" src="assets/Bilder/Aurelio.jpg" alt="Aurelio, the Seer" />
+      <img class="hero-image hero-aurelio" src="assets/Bilder/Aurelio.png" alt="Aurelio, the Seer" />
     </section>
 
     <section class="ticker" aria-label="Highlights">
@@ -91,7 +65,7 @@
     <section id="profile" class="card section reveal">
       <h3>Profile</h3>
       <div class="grid-2">
-        <img src="assets/Bilder/glaskugel-alpha.jpg" alt="Crystal orb" class="section-image" />
+        <img src="assets/Bilder/glaskugel-alpha.png" alt="Crystal orb" class="section-image" />
         <div>
           <p>
             <strong>Aurelio</strong> blends carnival instinct with modern mystic practice: calm in presence,
@@ -137,7 +111,7 @@
     <section id="story" class="card section reveal">
       <h3>Story</h3>
       <div class="grid-2">
-        <img src="assets/Bilder/aurelio-profile-new.jpg" alt="Aurelio profile image" class="section-image zelt-small" />
+        <img src="assets/Bilder/aurelio-profile-new.png" alt="Aurelio profile image" class="section-image zelt-small" />
         <div>
           <p>
             The story starts like a myth and usually ends as a hit: in a village between fog and carnival light,
@@ -157,32 +131,32 @@
       <h3>Tarot</h3>
       <p class="section-intro">Your full deck is included here (Major Arcana + four Aces) as an interactive visual gallery.</p>
       <div id="tarot-grid" class="tarot-grid" aria-live="polite">
-        <article class="tarot-card"><img src="assets/Tarotkarten/0 fool.jpg" alt="Tarot card: The Fool" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/1 magician.jpg" alt="Tarot card: The Magician" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/2 high priestress.jpg" alt="Tarot card: The High Priestess" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/3 empress.jpg" alt="Tarot card: The Empress" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/4 emperor.jpg" alt="Tarot card: The Emperor" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/5 hierophant.jpg" alt="Tarot card: The Hierophant" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/6 lovers.jpg" alt="Tarot card: The Lovers" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/7 chariot.jpg" alt="Tarot card: The Chariot" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/8 strengh.jpg" alt="Tarot card: Strength" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/9 hermit.jpg" alt="Tarot card: The Hermit" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/10 wheel.jpg" alt="Tarot card: Wheel of Fortune" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/11 justice.jpg" alt="Tarot card: Justice" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/12 hanged man.jpg" alt="Tarot card: The Hanged Man" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/13 death.jpg" alt="Tarot card: Death" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/14 temperance.jpg" alt="Tarot card: Temperance" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/15 devil.jpg" alt="Tarot card: The Devil" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/16 tower.jpg" alt="Tarot card: The Tower" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/17 star.jpg" alt="Tarot card: The Star" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/18 moon.jpg" alt="Tarot card: The Moon" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/19 sun.jpg" alt="Tarot card: The Sun" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/20 judgement.jpg" alt="Tarot card: Judgement" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/21 world.jpg" alt="Tarot card: The World" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/Ace of cups.jpg" alt="Tarot card: Ace of Cups" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/Ace of pentacles.jpg" alt="Tarot card: Ace of Pentacles" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/Ace of swords.jpg" alt="Tarot card: Ace of Swords" loading="lazy"></article>
-        <article class="tarot-card"><img src="assets/Tarotkarten/Ace of wands.jpg" alt="Tarot card: Ace of Wands" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/0 fool.png" alt="Tarot card: The Fool" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/1 magician.png" alt="Tarot card: The Magician" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/2 high priestress.png" alt="Tarot card: The High Priestess" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/3 empress.png" alt="Tarot card: The Empress" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/4 emperor.png" alt="Tarot card: The Emperor" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/5 hierophant.png" alt="Tarot card: The Hierophant" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/6 lovers.png" alt="Tarot card: The Lovers" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/7 chariot.png" alt="Tarot card: The Chariot" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/8 strengh.png" alt="Tarot card: Strength" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/9 hermit.png" alt="Tarot card: The Hermit" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/10 wheel.png" alt="Tarot card: Wheel of Fortune" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/11 justice.png" alt="Tarot card: Justice" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/12 hanged man.png" alt="Tarot card: The Hanged Man" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/13 death.png" alt="Tarot card: Death" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/14 temperance.png" alt="Tarot card: Temperance" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/15 devil.png" alt="Tarot card: The Devil" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/16 tower.png" alt="Tarot card: The Tower" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/17 star.png" alt="Tarot card: The Star" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/18 moon.png" alt="Tarot card: The Moon" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/19 sun.png" alt="Tarot card: The Sun" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/20 judgement.png" alt="Tarot card: Judgement" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/21 world.png" alt="Tarot card: The World" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/Ace of cups.png" alt="Tarot card: Ace of Cups" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/Ace of pentacles.png" alt="Tarot card: Ace of Pentacles" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/Ace of swords.png" alt="Tarot card: Ace of Swords" loading="lazy"></article>
+        <article class="tarot-card"><img src="assets/Tarotkarten/Ace of wands.png" alt="Tarot card: Ace of Wands" loading="lazy"></article>
       </div>
       <p class="shop-cta tarot-cta"><a class="btn btn-crystal" href="#" aria-label="Webshop coming soon">Webshop coming soon</a></p>
     </section>
@@ -190,7 +164,7 @@
     <section id="crystals" class="card section reveal">
       <h3>Crystals</h3>
       <div class="triple-layout">
-        <img src="assets/Bilder/capycrystal-alpha.jpg" alt="Capycrystal" class="section-image capy-tall" />
+        <img src="assets/Bilder/capycrystal-alpha.png" alt="Capycrystal" class="section-image capy-tall" />
         <div>
           <p>
             Crystals are not a miracle cure here—they’re focus amplifiers. They help structure intention,
@@ -209,14 +183,14 @@
           </ul>
           <p><a class="btn btn-crystal" href="#" aria-label="Webshop coming soon">Webshop coming soon</a></p>
         </div>
-        <img src="assets/Bilder/kristalle-alpha.jpg" alt="Crystal collection" class="side-raw" />
+        <img src="assets/Bilder/kristalle-alpha.png" alt="Crystal collection" class="side-raw" />
       </div>
     </section>
 
     <section id="runes" class="card section reveal">
       <h3>Runes</h3>
       <div class="triple-layout">
-        <img src="assets/Bilder/capyrune-alpha.jpg" alt="Capyrune" class="section-image capy-tall" />
+        <img src="assets/Bilder/capyrune-alpha.png" alt="Capyrune" class="section-image capy-tall" />
         <div>
           <p>
             Runes are Aurelio’s second language: older, more direct, and sometimes brutally honest.
@@ -231,22 +205,22 @@
           </ul>
           <p><a class="btn btn-crystal" href="#" aria-label="Webshop coming soon">Webshop coming soon</a></p>
         </div>
-        <img src="assets/Bilder/runes-alpha.jpg" alt="Rune set" class="side-raw" />
+        <img src="assets/Bilder/runes-alpha.png" alt="Rune set" class="side-raw" />
       </div>
     </section>
 
     <section id="closing-banner" class="card section reveal closing-banner">
       <h3>See you soon in the webshop ✨</h3>
       <p class="section-intro">Webshop coming soon · details on request.</p>
-      <img src="assets/Bilder/aurelio-banner-closing.jpg" alt="Aurelio closing banner" class="closing-banner-image" />
+      <img src="assets/Bilder/aurelio-banner-closing.png" alt="Aurelio closing banner" class="closing-banner-image" />
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 Aurelio Capytarot · Website v3small</p>
-    <p><a href="impressum.html">Imprint</a> · <a href="#top">Back to top ↑</a></p>
+    <p>© Capytarot · Draft v2 · built from source material in the project folder</p>
+    <a href="#top">Back to top ↑</a>
   </footer>
 
-  <script src="script.js?v=20260228c" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

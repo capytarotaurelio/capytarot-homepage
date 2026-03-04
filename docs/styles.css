@@ -340,6 +340,7 @@ main {
   object-fit: contain;
 }
 .section-intro { margin-top: -.1rem; color: var(--muted); }
+#tarot .section-intro { margin-top: 1rem; }
 
 .offers {
   display: grid;
@@ -358,7 +359,7 @@ main {
 
 .tarot-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+  grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: .62rem;
   overflow: visible;
 }

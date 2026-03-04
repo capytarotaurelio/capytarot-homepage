@@ -340,7 +340,49 @@ main {
   object-fit: contain;
 }
 .section-intro { margin-top: -.1rem; color: var(--muted); }
-#tarot .section-intro { margin-top: 1rem; }
+
+.section h3 {
+  margin: .1rem 0 .9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  font-size: clamp(1.15rem, 2.3vw, 1.6rem);
+  letter-spacing: .02em;
+  color: var(--gold-soft);
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: .3rem;
+}
+
+.section h4 {
+  margin: .35rem 0 .55rem;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  color: var(--gold-soft);
+  letter-spacing: .01em;
+}
+
+.section p {
+  line-height: 1.62;
+}
+
+.section ul {
+  margin-top: .45rem;
+}
+
+.section li {
+  margin: .22rem 0;
+  line-height: 1.52;
+}
+
+#tarot .section-intro { margin-top: 1rem; font-size: .98rem; }
+#tarot .tarot-grid { margin-bottom: 3rem; }
+
+.about-portraits .section-image {
+  max-width: 78%;
+  justify-self: center;
+}
+.about-portraits-second {
+  margin-top: .6rem;
+}
 
 .offers {
   display: grid;
@@ -352,10 +394,13 @@ main {
   border-radius: 12px;
   padding: .85rem;
   background: linear-gradient(180deg, rgba(214,176,104,.08), rgba(255,255,255,.02));
+  display: flex;
+  flex-direction: column;
+  min-height: 165px;
 }
 .offers h4 { margin: 0 0 .35rem 0; }
 .offers p { color: var(--muted); }
-.price { color: var(--gold-soft); font-weight: 700; margin-bottom: 0; }
+.price { color: var(--gold-soft); font-weight: 700; margin-top: auto; margin-bottom: 0; }
 
 .tarot-grid {
   display: grid;
